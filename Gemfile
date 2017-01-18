@@ -14,6 +14,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.2.0'
 
+gem 'resque' 
+gem 'resque-web', require: 'resque_web'
+# gem 'clockwork', '~> 2'           # task scheduling
+
 
 group :development do
   gem 'web-console', '~> 2.0'
