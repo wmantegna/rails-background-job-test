@@ -8,7 +8,9 @@ class HomeController < ApplicationController
 
     redirect_to root_path
   end
-  def enqueue_task
+  def enqueue_tasks
     Resque.enqueue(SleepingJob)
+
+    redirect_to root_path
   end
 end
