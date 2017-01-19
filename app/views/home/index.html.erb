@@ -1,5 +1,9 @@
 <h1>rails-background-test</h1>
 
 <%= form_tag(send_emails_home_index_path) do |f| %>
-  <button name="button" type="submit">Button</button>
+  <button name="button" type="submit">Send Emails!</button>
+<% end %>
+
+<%= form_tag(enqueue_tasks_home_index_path) do |f| %>
+  <button name="button" type="submit">Enqueue Tasks!</button>
 <% end %>

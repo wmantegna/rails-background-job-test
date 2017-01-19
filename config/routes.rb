@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :home, only: [:none] do
     collection do
       post :send_emails
+      post :enqueue_task
     end
   end
   
