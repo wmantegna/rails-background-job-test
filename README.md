@@ -1,4 +1,5 @@
-### Starting Resque
+---
+## Starting Resque
 
 Terminal Window 1:
 ```
@@ -10,9 +11,10 @@ Terminal Window 2:
 $ TERM_CHILD=1 QUEUES=* rake resque:work
 ```
 
+---
 ## Triggering background tasks
 
-### Console
+#### Console
 ```
 $ rails c
 Loading development environment (Rails 4.1.4)
@@ -20,11 +22,15 @@ Loading development environment (Rails 4.1.4)
 => true
 ```
 
-### Server
+
+#### Server
+
+Start the server
 ```
-$ rails c
+$ rails s
 ```
 
+Controller Actions:
 ```
 def send_emails
   UserMailer.test_mail('wmantegna@gmail.com').deliver_later
@@ -36,6 +42,7 @@ def enqueue_tasks
 end
 ```
 
+---
 
 ## Heroku Add-ons:
  1. SendGrid

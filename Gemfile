@@ -17,7 +17,7 @@ gem 'bootstrap-sass', '~> 3.2.0'
 # Background Jobs
 gem 'redis'
 gem 'resque', "~> 1.22.0"
-gem 'resque-web', require: 'resque_web'
+# gem 'resque-web', require: 'resque_web'
 
 
 
