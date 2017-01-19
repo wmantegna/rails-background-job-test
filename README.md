@@ -1,4 +1,5 @@
 ---
+
 ## Starting Resque
 
 Terminal Window 1:
@@ -12,6 +13,7 @@ $ TERM_CHILD=1 QUEUES=* rake resque:work
 ```
 
 ---
+
 ## Triggering background tasks
 
 #### Console
