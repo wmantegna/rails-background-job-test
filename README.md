@@ -1,14 +1,19 @@
-== README
-
-Starting Resque
+### Starting Resque
 
 Terminal Window 1:
-`$ redis-server`
+
+```
+$ redis-server
+```
 
 Terminal Window 2:
-`$ TERM_CHILD=1 QUEUES=* rake resque:work`
+
+```
+$ TERM_CHILD=1 QUEUES=* rake resque:work
+```
 
 Terminal Window 3:
+
 ```
 $rails c
 Loading development environment (Rails 4.1.4)
@@ -16,6 +21,6 @@ Loading development environment (Rails 4.1.4)
 => true
 ```
 
-Heroku Add-ons:
- * SendGrid
- * Redis Cloud
+### Heroku Add-ons:
+ 1. SendGrid
+ 2. Redis Cloud
