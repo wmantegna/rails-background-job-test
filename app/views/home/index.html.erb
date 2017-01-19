@@ -1,5 +1,5 @@
 <h1>rails-background-test</h1>
 
-<%= form_for order, url: send_emails_path do |f| %>
-  <% f.submit 'Enqueue Emails!', class: 'btn btn-primary' %>
+<%= form_tag(send_emails_home_index_path) do |f| %>
+  <button name="button" type="submit">Button</button>
 <% end %>

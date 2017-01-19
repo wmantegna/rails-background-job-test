@@ -10,3 +10,8 @@ Loading development environment (Rails 4.1.4)
 > Resque.enqueue(SleepingJob)
 => true
 
+
+
+Heroku Add-ons:
+ * SendGrid
+ * Redis Cloud

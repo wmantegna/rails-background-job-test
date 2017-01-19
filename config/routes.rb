@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   get 'home/index'
   
-  patch 'send_emails', to: 'home#send_emails', as: :send_emails
+  resources :home, only: [:none] do
+    collection do
+      post :send_emails
+    end
+  end
+  
 
   root 'home#index'
 end

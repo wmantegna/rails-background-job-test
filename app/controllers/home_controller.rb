@@ -3,7 +3,8 @@ class HomeController < ApplicationController
   end
 
   def send_emails
-    UserMailer.test_mail(user).deliver_later
+    # Resque.enqueue(SleepingJob)
+    UserMailer.test_mail('wmantegna@gmail.com').deliver_later
 
     redirect_to root_path
   end
