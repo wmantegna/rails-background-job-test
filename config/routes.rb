@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'home/index'
-  
+
+  get 'home/index'  
   resources :home, only: [:none] do
     collection do
       post :send_email_now
@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     end
   end
   
+  resources :items, only: [:index, :create]
+  
 
-  root 'home#index'
+  root 'items#index'
 end
