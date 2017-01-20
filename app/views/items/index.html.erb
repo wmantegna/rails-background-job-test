@@ -1,9 +1,10 @@
-<table class="table table-hover table-bordered" style="max-width: 500px;">
+<table class="table table-hover table-bordered" style="max-width: 800px;">
   <thead>
     <tr>
-      <td>Last Updated By</td>
-      <td>Human?</td>
-      <td>Job?</td>
+      <th>Last Updated By</th>
+      <th>Human?</th>
+      <th>Job?</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -12,7 +13,16 @@
         <td><%= i.last_updated_by %></td>
         <td><%= i.created_at %></td>
         <td><%= i.updated_at %></td>
+        <td>
+          <%= form_for i do |f| %>
+            <%= f.submit 'Update with Background Job', class: 'btn btn-info btn-sm' %>
+          <% end %> 
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
+
+<%= form_for Item.new do |f| %>
+  <%= f.submit 'Create a new item', class: 'btn btn-primary' %>
+<% end %>
