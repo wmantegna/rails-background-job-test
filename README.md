@@ -1,6 +1,12 @@
 ---
 
-## Starting Resque
+## Local Set-up
+
+```
+$ cp .env.example .env
+```
+
+### Starting Resque
 
 Terminal Window 1:
 ```
@@ -46,6 +52,11 @@ end
 
 ---
 
-## Heroku Add-ons:
- 1. SendGrid
- 2. Redis Cloud
+## Setting up Heroku:
+
+```
+$ heroku create
+$ heroku addons:create rediscloud
+$ heroku scale web=1 resque=1
+
+```
