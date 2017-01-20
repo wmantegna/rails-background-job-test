@@ -57,6 +57,8 @@ end
 ```
 $ heroku create
 $ heroku addons:create rediscloud
+$ git push heroku master
+$ heroku run rake db:migrate 
 $ heroku scale web=1 resque=1
 
 ```
